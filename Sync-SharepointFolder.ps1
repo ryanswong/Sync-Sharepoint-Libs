@@ -1,3 +1,7 @@
+
+# code adapted from: https://github.com/tabs-not-spaces/CodeDump/blob/master/Sync-SharepointFolder/Sync-SharepointFolder.ps1
+# for Level 8 Construction Inc use only
+
 #region Functions
 function Sync-SharepointLocation {
     param (
@@ -43,6 +47,7 @@ function Sync-SharepointLocation {
     }    
 }
 #endregion
+
 #region Main Process
 try {
     #region Sharepoint Sync
@@ -57,7 +62,9 @@ try {
         webTitle  = "Title"
         listTitle = "FolderName"
     }
-    $params.syncPath  = "$(split-path $env:onedrive)\$($userUpn.Host)\$($params.webTitle) - $($Params.listTitle)"
+    $params.
+    
+      = "$(split-path $env:onedrive)\$($userUpn.Host)\$($params.webTitle) - $($Params.listTitle)"
     Write-Host "SharePoint params:"
     $params | Format-Table
     if (!(Test-Path $($params.syncPath))) {
